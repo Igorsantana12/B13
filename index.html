@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B13 Centro de Treinamento | Cross em Cajazeiras 8, Salvador</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+
+    <meta name="description" content="O corpo alcança o que a mente acredita. Agende sua aula experimental no B13 Centro de Treinamento, em Cajazeiras 8, Salvador.">
+    <meta name="theme-color" content="#0f130e">
+    
+
+
+  
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+    <style>
+        /* =============== Identidade =============== */
+        :root {
+            --bg: #0f130e;
+            --bg-2: #161a14;
+            --bg-3: #1d2219;
+            --volt: #35f043;
+            --volt-dark: #1fb92c;
+            --white: #ffffff;
+            --text: #e9ede7;
+            --muted: #98a294;
+            --line: rgba(255, 255, 255, .12);
+            --display: 'Anton', 'Arial Narrow', Impact, sans-serif;
+            --body: 'Archivo', 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+
+        body {
+            font-family: var(--body);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        img { max-width: 100%; display: block; }
+        a { color: inherit; }
+        button, select, input { font: inherit; }
+
+        :focus-visible { outline: 3px solid var(--volt); outline-offset: 3px; }
+
+        .wrap { max-width: 1200px; margin: 0 auto; padding: 0 22px; }
+
+        /* =============== Botões =============== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 26px;
+            border-radius: 6px;
+            border: 2px solid transparent;
+            font-family: var(--body);
+            font-weight: 700;
+            font-size: 1.02rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform .15s ease, background .15s ease, color .15s ease, border-color .15s ease;
+        }
+
+        .btn:hover { transform: translateY(-2px); }
+
+        .btn-volt { background: var(--volt); color: #0b0f0a; }
+        .btn-volt:hover { background: var(--white); }
+
+        .btn-white { background: var(--white); color: #0b0f0a; }
+        .btn-white i { color: #25d366; font-size: 1.25rem; }
+        .btn-white:hover { background: var(--volt); }
+        .btn-white:hover i { color: #0b0f0a; }
+
+        .btn-ghost { border-color: var(--line); color: var(--white); background: transparent; }
+        .btn-ghost:hover { border-color: var(--volt); color: var(--volt); }
+
+        .btn-dark { background: #0b0f0a; color: var(--volt); }
+        .btn-dark:hover { background: #000; }
+
+        /* =============== Cabeçalho =============== */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 60;
+            background: rgba(15, 19, 14, .88);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .brand img { height: 56px; width: auto; }
+
+        .brand-name { font-family: var(--display); font-size: 1.35rem; line-height: 1; color: var(--white); }
+        .brand-name small { display: block; font-family: var(--body); font-size: .78rem; color: var(--muted); font-weight: 500; margin-top: 3px; }
+
+        .main-nav { display: flex; align-items: center; gap: 26px; }
+        .main-nav a:not(.btn) { text-decoration: none; font-weight: 500; color: var(--text); }
+        .main-nav a:not(.btn):hover { color: var(--volt); }
+        .main-nav .btn { padding: 10px 18px; font-size: .95rem; }
+
+        /* =============== Hero =============== */
+        .hero {
+            position: relative;
+            padding: 56px 0 110px;
+            background:
+                radial-gradient(ellipse at 85% 30%, rgba(53, 240, 67, .12), transparent 55%),
+                var(--bg);
+            overflow: hidden;
+        }
+
+        /* faixa verde diagonal na base do hero */
+        .hero::after {
+            content: "";
+            position: absolute;
+            left: 0; right: 0; bottom: -1px;
+            height: 70px;
+            background: var(--volt);
+            clip-path: polygon(0 100%, 100% 0, 100% 100%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.12fr .88fr;
+            gap: 56px;
+            align-items: center;
+        }
+
+        .phrase {
+            font-family: var(--display);
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: clamp(3rem, 7.4vw, 6.6rem);
+            line-height: .96;
+            color: var(--white);
+            margin-bottom: 26px;
+            text-wrap: balance;
+        }
+
+        .phrase span { display: block; }
+        .phrase .accent { color: var(--volt); }
+
+        .hero-lead { font-size: 1.15rem; max-width: 30em; color: var(--text); margin-bottom: 30px; }
+        .hero-lead strong { color: var(--white); }
+
+        .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+
+        .hero-address {
+            margin-top: 26px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: var(--muted);
+            font-size: .98rem;
+        }
+
+        .hero-address i { color: var(--volt); margin-top: 4px; }
+
+        .chevrons {
+            position: absolute;
+            top: 26px;
+            right: 22px;
+            width: 150px;
+            opacity: .9;
+            pointer-events: none;
+        }
+
+        /* =============== Carrossel =============== */
+        .carousel { position: relative; max-width: 540px; width: 100%; margin-left: auto; }
+
+        .frame {
+            position: relative;
+            aspect-ratio: 1 / 1;
+            background: #0b0f0a;
+            border: 3px solid #0b0f0a;
+            box-shadow: 14px 14px 0 var(--volt);
+            overflow: hidden;
+            touch-action: pan-y;
+        }
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .55s ease, visibility .55s;
+        }
+
+        .slide.is-active { opacity: 1; visibility: visible; }
+        .slide img { width: 100%; height: 100%; object-fit: cover; }
+        .slide img.contain { object-fit: contain; }
+
+        .c-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 5;
+            width: 46px;
+            height: 46px;
+            border: 0;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, .7);
+            color: var(--volt);
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background .15s ease, color .15s ease;
+        }
+
+        .c-btn:hover { background: var(--volt); color: #0b0f0a; }
+        .c-btn.prev { left: 10px; }
+        .c-btn.next { right: 10px; }
+
+        .bar { position: absolute; left: 0; bottom: 0; height: 5px; width: 0; background: var(--volt); z-index: 6; }
+        .bar.run { animation: fill var(--delay, 5s) linear forwards; }
+        @keyframes fill { to { width: 100%; } }
+
+        .c-foot {
+            margin-top: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .c-title { font-weight: 600; color: var(--white); }
+
+        .c-link {
+            font-weight: 700;
+            color: var(--volt);
+            text-decoration: none;
+            border-bottom: 2px solid currentColor;
+        }
+
+        .c-link:hover { color: var(--white); }
+
+        .dots { display: flex; gap: 8px; width: 100%; }
+
+        .dot {
+            flex: 1;
+            height: 6px;
+            border: 0;
+            background: var(--bg-3);
+            cursor: pointer;
+            border-radius: 3px;
+            transition: background .2s ease;
+        }
+
+        .dot:hover { background: #3a4335; }
+        .dot.is-active { background: var(--volt); }
+
+        /* =============== Seções (base) =============== */
+        section { position: relative; }
+        .section { padding: 96px 0; }
+
+        .section-title {
+            font-family: var(--display);
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: clamp(2.4rem, 5.2vw, 4rem);
+            line-height: 1;
+            color: var(--white);
+            margin-bottom: 14px;
+        }
+
+        .section-sub { color: var(--muted); font-size: 1.1rem; max-width: 34em; }
+
+        /* =============== Aula experimental =============== */
+        .trial { background: var(--volt); color: #0b0f0a; padding: 96px 0; }
+
+        .trial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+
+        .trial .section-title { color: #0b0f0a; font-size: clamp(2.6rem, 6vw, 4.8rem); }
+        .trial .lead { font-size: 1.15rem; max-width: 28em; margin-bottom: 26px; font-weight: 500; }
+
+        .steps { list-style: none; counter-reset: step; display: grid; gap: 14px; }
+
+        .steps li {
+            counter-increment: step;
+            display: flex;
+            gap: 14px;
+            align-items: baseline;
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .steps li::before {
+            content: counter(step);
+            flex: none;
+            width: 34px;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            background: #0b0f0a;
+            color: var(--volt);
+            font-family: var(--display);
+            font-size: 1.1rem;
+            border-radius: 50%;
+        }
+
+        .trial-card {
+            background: #0b0f0a;
+            color: var(--text);
+            padding: 34px 30px;
+            border-radius: 10px;
+            box-shadow: 12px 12px 0 rgba(0, 0, 0, .22);
+        }
+
+        .trial-card h3 { font-family: var(--display); font-weight: 400; font-size: 1.9rem; color: var(--white); text-transform: uppercase; margin-bottom: 18px; }
+
+        .field { margin-bottom: 16px; }
+        .field label { display: block; font-size: .92rem; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+
+        .field input, .field select {
+            width: 100%;
+            background: var(--bg-3);
+            color: var(--white);
+            border: 2px solid transparent;
+            border-radius: 6px;
+            padding: 13px 14px;
+            font-size: 1rem;
+        }
+
+        .field input:focus, .field select:focus { border-color: var(--volt); outline: none; }
+        .field input::placeholder { color: #6f786b; }
+        .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+        .trial-card .btn { width: 100%; margin-top: 6px; background: var(--volt); color: #0b0f0a; }
+        .trial-card .btn:hover { background: var(--white); }
+        .form-error { color: #ff8a80; font-size: .92rem; min-height: 1.3em; margin-top: 8px; }
+
+        /* =============== Grade =============== */
+        .grade { background: var(--bg-2); }
+
+        .grade-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 40px; }
+
+        .next-class {
+            background: var(--bg-3);
+            border-left: 5px solid var(--volt);
+            padding: 14px 20px;
+            border-radius: 0 8px 8px 0;
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        .next-class small { display: block; color: var(--muted); font-weight: 500; font-size: .85rem; }
+        .next-class strong { color: var(--volt); }
+
+        .weekdays { display: flex; align-items: center; gap: 8px; margin-bottom: 26px; flex-wrap: wrap; }
+        .weekdays span.day { background: var(--volt); color: #0b0f0a; font-weight: 700; padding: 6px 14px; border-radius: 4px; font-size: .95rem; }
+        .weekdays .lbl { color: var(--muted); margin-left: 6px; }
+
+        .periods { display: grid; grid-template-columns: 1.1fr .5fr 1.4fr; gap: 20px; }
+
+        .period { background: var(--bg); padding: 22px; border-radius: 10px; border: 1px solid var(--line); }
+        .period h3 { font-size: 1rem; font-weight: 600; color: var(--muted); margin-bottom: 14px; }
+
+        .slots { display: flex; flex-wrap: wrap; gap: 10px; }
+
+        .slot {
+            background: transparent;
+            border: 2px solid var(--line);
+            color: var(--white);
+            font-family: var(--display);
+            font-size: 1.9rem;
+            line-height: 1;
+            padding: 12px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background .15s ease, color .15s ease, border-color .15s ease, transform .15s ease;
+        }
+
+        .slot:hover { background: var(--volt); color: #0b0f0a; border-color: var(--volt); transform: translateY(-2px); }
+        .slot.is-next { border-color: var(--volt); color: var(--volt); }
+        .slot.is-next:hover { color: #0b0f0a; }
+
+        .weekend { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+
+        .wk-card { padding: 22px 24px; border-radius: 10px; border: 1px solid var(--line); background: var(--bg); display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+        .wk-card h3 { font-family: var(--display); font-weight: 400; font-size: 1.6rem; text-transform: uppercase; color: var(--white); line-height: 1.1; }
+        .wk-card p { color: var(--muted); font-size: .95rem; }
+        .wk-card.is-next { border-color: var(--volt); }
+
+        .grade-note { margin-top: 22px; color: var(--muted); font-size: .95rem; }
+        .grade-note i { color: var(--volt); margin-right: 6px; }
+
+        /* =============== Planos =============== */
+        .plans-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; margin-top: 44px; max-width: 900px; }
+
+        .plan {
+            padding: 36px 32px;
+            border-radius: 12px;
+            border: 2px solid var(--line);
+            background: var(--bg-2);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .plan.featured { background: var(--volt); color: #0b0f0a; border-color: var(--volt); }
+
+        .plan-name { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: 2.3rem; line-height: 1; }
+        .plan-desc { color: var(--muted); margin-bottom: 18px; }
+        .plan.featured .plan-desc { color: #12300f; }
+
+        .price { display: flex; align-items: flex-start; gap: 6px; font-family: var(--display); line-height: .9; margin-bottom: 4px; }
+        .price small { font-size: 1.6rem; margin-top: 10px; }
+        .price b { font-weight: 400; font-size: 5.4rem; }
+        .promo { font-size: .9rem; margin-bottom: 26px; color: var(--muted); }
+        .plan.featured .promo { color: #12300f; }
+
+        .plan .btn { margin-top: auto; }
+        .plan:not(.featured) .btn { background: var(--volt); color: #0b0f0a; }
+        .plan.featured .btn { background: #0b0f0a; color: var(--volt); }
+        .plan .btn:hover { background: var(--white); color: #0b0f0a; }
+
+        /* =============== O box =============== */
+        .space { background: var(--bg-2); }
+
+        .space-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 64px; align-items: center; }
+
+        .space-photo { position: relative; max-width: 420px; }
+        .space-photo img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 6px; box-shadow: -14px 14px 0 var(--volt); }
+
+        .space p { color: var(--text); font-size: 1.12rem; max-width: 30em; margin-bottom: 26px; }
+
+        /* =============== Professores =============== */
+        .staff { background: var(--bg); }
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 26px;
+            margin-top: 44px;
+        }
+
+        .staff-card {
+            background: var(--bg-2);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform .15s ease, border-color .15s ease;
+        }
+
+        .staff-card:hover { transform: translateY(-4px); border-color: var(--volt); }
+
+        .staff-photo { position: relative; aspect-ratio: 4 / 5; background: var(--bg-3); overflow: hidden; }
+        . .staff-photo img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            object-position: center center; /* Isto faz com que a foto centre e foque na parte de cima (rosto) */
+        }
+
+        .staff-photo img.is-missing { display: none; }
+
+        .staff-ph {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: var(--muted);
+            text-align: center;
+            padding: 16px;
+            background:
+                repeating-linear-gradient(45deg, rgba(255, 255, 255, .03) 0 12px, transparent 12px 24px),
+                var(--bg-3);
+        }
+
+        .staff-ph i { font-size: 2.2rem; color: var(--volt); }
+        .staff-ph code { font-size: .78rem; background: rgba(255, 255, 255, .08); padding: 2px 8px; border-radius: 5px; }
+
+        .staff-body { padding: 18px 20px 22px; }
+
+        .staff-name { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: 1.5rem; color: var(--white); line-height: 1.1; }
+        .staff-role { color: var(--volt); font-weight: 600; font-size: .92rem; margin: 4px 0 10px; }
+        .staff-bio { color: var(--muted); font-size: .95rem; margin-bottom: 14px; }
+
+        .staff-ig {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: .92rem;
+            font-weight: 600;
+        }
+
+        .staff-ig i { color: var(--volt); }
+        .staff-ig:hover { color: var(--volt); }
+
+        /* =============== Contato =============== */
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; margin-top: 40px; }
+
+        .contact-card {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            padding: 24px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: var(--bg-2);
+            text-decoration: none;
+            transition: border-color .15s ease, transform .15s ease;
+        }
+
+        .contact-card:hover { border-color: var(--volt); transform: translateY(-3px); }
+        .contact-card i { color: var(--volt); font-size: 1.6rem; margin-top: 4px; width: 28px; text-align: center; }
+        .contact-card strong { display: block; color: var(--white); font-size: 1.05rem; }
+        .contact-card span { color: var(--muted); font-size: .98rem; overflow-wrap: anywhere; }
+
+        /* =============== Rodapé e flutuantes =============== */
+        footer { background: #0a0d09; border-top: 1px solid var(--line); padding: 34px 0; color: var(--muted); font-size: .92rem; text-align: center; }
+        footer strong { color: var(--white); }
+
+        .whatsapp-float {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            background: #25d366;
+            color: #fff;
+            font-size: 2rem;
+            display: grid;
+            place-items: center;
+            text-decoration: none;
+            z-index: 80;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, .5);
+            transition: transform .2s ease;
+        }
+
+        .whatsapp-float:hover { transform: scale(1.08); }
+
+        .mobile-bar { display: none; }
+
+        /* =============== Responsivo =============== */
+        @media (max-width: 980px) {
+            .hero-grid, .trial-grid, .space-grid { grid-template-columns: 1fr; gap: 48px; }
+            .carousel { margin: 0 auto; }
+            .space-photo { margin: 0 auto; }
+            .periods { grid-template-columns: 1fr; }
+            .chevrons { width: 100px; top: 16px; }
+        }
+
+        @media (max-width: 760px) {
+            .main-nav a:not(.btn) { display: none; }
+            .brand-name { display: none; }
+            .section, .trial { padding: 72px 0; }
+            .hero { padding: 36px 0 90px; }
+            .plans-grid, .weekend { grid-template-columns: 1fr; }
+            .field-row { grid-template-columns: 1fr; }
+            .cta-row .btn { width: 100%; }
+            .carousel { padding-right: 14px; }
+            .frame { box-shadow: 10px 10px 0 var(--volt); }
+            .whatsapp-float { display: none; }
+            body { padding-bottom: 74px; }
+
+            .mobile-bar {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                position: fixed;
+                left: 0; right: 0; bottom: 0;
+                z-index: 90;
+                padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
+                background: rgba(10, 13, 9, .95);
+                border-top: 1px solid var(--line);
+            }
+
+            .mobile-bar .btn { padding: 13px 10px; font-size: .95rem; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =============== Cabeçalho =============== -->
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a href="#topo" class="brand" aria-label="B13 Centro de Treinamento, início">
+                <img src="logo-b13.png" alt="Logo B13 Centro de Treinamento">
+                <span class="brand-name">B13CT<small>Centro de Treinamento</small></span>
+            </a>
+            <nav class="main-nav" aria-label="Navegação principal">
+                <a href="#grade">Horários</a>
+                <a href="#planos">Planos</a>
+                <a href="#box">O box</a>
+                <a href="#professores">Professores</a>
+                <a href="#contato">Contato</a>
+                <a class="btn btn-volt" href="#experimental">Aula experimental</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="topo">
+
+        <!-- =============== Hero + carrossel =============== -->
+        <section class="hero">
+            <svg class="chevrons" id="chevrons" aria-hidden="true" viewBox="0 0 168 70"></svg>
+
+            <div class="wrap hero-grid">
+                <div class="hero-copy">
+                    <h1 class="phrase">
+                        <span>O corpo alcança</span>
+                        <span class="accent">o que a mente acredita.</span>
+                    </h1>
+                    <p class="hero-lead">Treino em grupo no <strong>B13 Centro de Treinamento</strong>, em Cajazeiras 8. Marque uma aula experimental e venha sentir o box por dentro.</p>
+
+                    <div class="cta-row">
+                        <a class="btn btn-volt" href="#experimental"><i class="fa-regular fa-calendar-check"></i> Agendar aula experimental</a>
+                        <a class="btn btn-white" href="https://wa.me/5571992883412?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20B13%20CT%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp</a>
+                        <a class="btn btn-ghost" href="https://instagram.com/b13_ct" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> @b13_ct</a>
+                    </div>
+
+                    <p class="hero-address"><i class="fa-solid fa-location-dot"></i><span>Estrada da Paciência, 27, Cajazeiras 8, Salvador, BA</span></p>
+                </div>
+
+                <!-- Carrossel: as imagens ficam em /img e são listadas no script no fim da página -->
+                <div class="carousel" id="carousel" aria-roledescription="carrossel" aria-label="Destaques do B13 CT">
+                    <div class="frame" id="frame">
+                        <button class="c-btn prev" id="cPrev" aria-label="Slide anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="c-btn next" id="cNext" aria-label="Próximo slide"><i class="fa-solid fa-chevron-right"></i></button>
+                        <div class="bar" id="cBar"></div>
+                    </div>
+                    <div class="c-foot">
+                        <span class="c-title" id="cTitle"></span>
+                        <a class="c-link" id="cLink" href="#experimental"></a>
+                        <div class="dots" id="cDots" role="tablist" aria-label="Escolher slide"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============== Aula experimental =============== -->
+        <section class="trial" id="experimental">
+            <div class="wrap trial-grid">
+                <div>
+                    <h2 class="section-title">Sua primeira aula é aqui.</h2>
+                    <p class="lead">Escolha o dia e o horário. Sua mensagem já vai pronta para o nosso WhatsApp e a gente confirma com você.</p>
+                    <ol class="steps">
+                        <li>Preencha o formulário ao lado.</li>
+                        <li>Envie pelo WhatsApp e receba a confirmação.</li>
+                        <li>Chegue no horário e treine com a turma.</li>
+                    </ol>
+                </div>
+
+                <div class="trial-card">
+                    <h3>Agendar aula experimental</h3>
+                    <div id="trialForm">
+                        <div class="field">
+                            <label for="fNome">Seu nome</label>
+                            <input id="fNome" type="text" autocomplete="given-name" placeholder="Como podemos te chamar?">
+                        </div>
+                        <div class="field-row">
+                            <div class="field">
+                                <label for="fDia">Dia</label>
+                                <select id="fDia">
+                                    <option>Segunda</option><option>Terça</option><option>Quarta</option>
+                                    <option>Quinta</option><option>Sexta</option><option>Sábado</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="fHora">Horário</label>
+                                <select id="fHora"></select>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="fXp">Já treinou Cross?</label>
+                            <select id="fXp">
+                                <option>Nunca treinei</option>
+                                <option>Já treinei antes</option>
+                                <option>Treino atualmente</option>
+                            </select>
+                        </div>
+                        <button class="btn" id="fSend" type="button"><i class="fa-brands fa-whatsapp"></i> Enviar pelo WhatsApp</button>
+                        <p class="form-error" id="fErr" role="alert"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============== Grade =============== -->
+        <section class="section grade" id="grade">
+            <div class="wrap">
+                <div class="grade-head">
+                    <div>
+                        <h2 class="section-title">Grade de horários</h2>
+                        <p class="section-sub">Toque em um horário para levá-lo ao formulário da aula experimental.</p>
+                    </div>
+                    <div class="next-class" id="nextClass" hidden></div>
+                </div>
+
+                <div class="weekdays" aria-label="Segunda a sexta">
+                    <span class="day">Seg</span><span class="day">Ter</span><span class="day">Qua</span><span class="day">Qui</span><span class="day">Sex</span>
+                    <span class="lbl">os mesmos horários todos os dias</span>
+                </div>
+
+                <div class="periods">
+                    <div class="period">
+                        <h3>Manhã</h3>
+                        <div class="slots">
+                            <button class="slot" data-time="06:00">06:00</button>
+                            <button class="slot" data-time="07:00">07:00</button>
+                            <button class="slot" data-time="08:00">08:00</button>
+                        </div>
+                    </div>
+                    <div class="period">
+                        <h3>Meio-dia</h3>
+                        <div class="slots">
+                            <button class="slot" data-time="12:00">12:00</button>
+                        </div>
+                    </div>
+                    <div class="period">
+                        <h3>Tarde e noite</h3>
+                        <div class="slots">
+                            <button class="slot" data-time="16:30">16:30</button>
+                            <button class="slot" data-time="17:30">17:30</button>
+                            <button class="slot" data-time="18:30">18:30</button>
+                            <button class="slot" data-time="19:30">19:30</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="weekend">
+                    <div class="wk-card" id="cardSab">
+                        <div>
+                            <h3>Sábado</h3>
+                            <p>Turma única</p>
+                        </div>
+                        <button class="slot" data-time="07:00" data-day="Sábado">07:00</button>
+                    </div>
+                    <div class="wk-card">
+                        <div>
+                            <h3>Domingo</h3>
+                            <p>De acordo com a programação da empresa.</p>
+                        </div>
+                        <a class="btn btn-ghost" href="https://wa.me/5571992883412?text=Ol%C3%A1!%20Quero%20saber%20a%20programa%C3%A7%C3%A3o%20de%20domingo%20do%20B13%20CT." target="_blank" rel="noopener">Perguntar no WhatsApp</a>
+                    </div>
+                </div>
+
+                <p class="grade-note"><i class="fa-solid fa-circle-info"></i>Na sexta, a aula do meio-dia é Pump Cross.</p>
+            </div>
+        </section>
+
+        <!-- =============== Planos =============== -->
+        <section class="section" id="planos">
+            <div class="wrap">
+                <h2 class="section-title">Escolha seu ritmo</h2>
+                <p class="section-sub">Dois planos, os dois com valores promocionais.</p>
+
+                <div class="plans-grid">
+                    <article class="plan featured">
+                        <h3 class="plan-name">2x na semana</h3>
+                        <p class="plan-desc">Para encaixar o treino na rotina e criar constância.</p>
+                        <div class="price"><small>R$</small><b>99,90</b></div>
+                        <p class="promo">Valor promocional</p>
+                        <a class="btn" href="https://wa.me/5571992883412?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20Plano%202x%20na%20semana%20(R%24159%2C90)." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Quero o plano 2x</a>
+                    </article>
+                     
+                    <article class="plan featured">
+                        <h3 class="plan-name">3x na semana</h3>
+                        <p class="plan-desc">Para você que não abre mão de treinar durante a semana.</p>
+                        <div class="price"><small>R$</small><b>129,90</b></div>
+                        <p class="promo">Valor promocional</p>
+                        <a class="btn" href="https://wa.me/5571992883412?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20Plano%203x%20na%20semana%20(R%24159%2C90)." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Quero o plano 3x</a>
+                    </article>
+
+                    <article class="plan featured">
+                        <h3 class="plan-name">5x na semana</h3>
+                        <p class="plan-desc">Para quem quer treinar todos os dias úteis e evoluir mais rápido.</p>
+                        <div class="price"><small>R$</small><b>159,90</b></div>
+                        <p class="promo">Valor promocional</p>
+                        <a class="btn" href="https://wa.me/5571992883412?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20Plano%205x%20na%20semana%20(R%24159%2C90)." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Quero o plano 5x</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============== O box =============== -->
+        <section class="section space" id="box">
+            <div class="wrap space-grid">
+                <div class="space-photo">
+                    <img src="b13games.jpeg" alt="Espaço de treino do B13 CT, com piso emborrachado e a frase do box pintada na parede" loading="lazy">
+                </div>
+                <div>
+                    <h2 class="section-title">O corpo Alcança o que a mente acredita.</h2>
+                    <p style="font-family: 'Montserrat', sans-serif;"> A B13 é mais do que um lugar para treinar. É uma família formada por pessoas que compartilham objetivos, desafios e conquistas.
+
+Com uma metodologia eficiente, coaches capacitados e uma comunidade que incentiva você a dar o seu melhor, criamos um ambiente onde cada aluno se sente parte de algo maior.
+
+Aqui, o suor vira resultado, os desafios viram conquistas e o treino se transforma em estilo de vida.</p>
+                    <a class="btn btn-volt" href="#experimental"><i class="fa-regular fa-calendar-check"></i> Agendar aula experimental</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============== Professores =============== -->
+        <section class="section staff" id="professores">
+            <div class="wrap">
+                <h2 class="section-title">Quem te orienta no treino</h2>
+                <p class="section-sub">Professores que acompanham cada movimento, da base até o PR.</p>
+
+                <!-- Para adicionar ou editar professores, use o array STAFF no fim da página.
+                     Enquanto a foto não existir, aparece um espaço reservado. -->
+                <div class="staff-grid" id="staffGrid"></div>
+            </div>
+        </section>
+
+        <!-- =============== Contato =============== -->
+        <section class="section" id="contato">
+            <div class="wrap">
+                <h2 class="section-title">Fale com a gente</h2>
+                <p class="section-sub">Tire dúvidas, peça informações ou venha direto ao box.</p>
+
+                <div class="contact-grid">
+                    <a class="contact-card" href="https://wa.me/5571992883412?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20B13%20CT." target="_blank" rel="noopener">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div><strong>WhatsApp</strong><span>(71) 99288-3412</span></div>
+                    </a>
+                    <a class="contact-card" href="https://instagram.com/b13_ct" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-instagram"></i>
+                        <div><strong>Instagram</strong><span>@b13_ct</span></div>
+                    </a>
+                    <a class="contact-card" href="mailto:atendimentob13@gmail.com">
+                        <i class="fa-regular fa-envelope"></i>
+                        <div><strong>E-mail</strong><span>atendimentob13@gmail.com</span></div>
+                    </a>
+                    <a class="contact-card" href="https://www.google.com/maps/search/?api=1&query=Estrada+da+Pacien%C3%A7ia+27+Cajazeiras+Salvador+BA" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div><strong>Como chegar</strong><span>Estrada da Paciência, 27, Cajazeiras 8, Salvador, BA, 41338-700</span></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <p>&copy; 2026 <strong>B13 Centro de Treinamento (B13CT)</strong>. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <a class="whatsapp-float" href="https://wa.me/5571992883412?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20B13%20CT." target="_blank" rel="noopener" aria-label="Chamar no WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+    <!-- Barra fixa no celular -->
+    <div class="mobile-bar">
+        <a class="btn btn-volt" href="#experimental">Aula experimental</a>
+        <a class="btn btn-white" href="https://wa.me/5571992883412?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20B13%20CT." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    </div>
+
+    <script>
+        const WA = 'https://wa.me/5571992883412';
+        const waLink = text => `${WA}?text=${encodeURIComponent(text)}`;
+
+        
+        const SLIDES = [
+            { img: 'box13.jpeg',      alt: 'Espaço de treino do B13 CT',        title: 'Conheça o nosso box',          cta: 'Agendar aula experimental', href: '#experimental' },
+            { img: 'galera.jpeg', alt: 'Trenio',  title: 'Aqui, ninguém treina sozinho. Juntos, superamos limites e celebramos cada conquista.', cta: 'Agendar aula experimental', href: '#experimental',
+              href: waLink('Olá! Gostaria de agendar uma aula experimental.') },
+              { img: 'deitado.jpeg', alt: 'Treino em Galera',  title: 'Não importa de onde você está começando. O importante é dar o primeiro passo hoje.', cta: 'Agendar aula experimental', href: '#experimental',
+              href: waLink('Olá! Gostaria de agendar uma aula experimental') },
+            { img: 'disciplina.png', alt: 'Disciplina', title: 'Não espere pela motivaçõ, faça pela disciplina.', cta:'Agendar aula experimental', href: '#experimental',
+              href: waLink('Olá! Gostaria de agendar um aula experimental.') },
+            { img: 'horariob13.jpeg',    alt: 'Grade de horários do B13 CT',       title: 'Grade de horários',            cta: 'Ver horários', href: '#grade', fit: 'contain' }
+        ];
+        const DELAY = 5000;
+
+        const frame = document.getElementById('frame');
+        const bar = document.getElementById('cBar');
+        const dotsEl = document.getElementById('cDots');
+        const titleEl = document.getElementById('cTitle');
+        const linkEl = document.getElementById('cLink');
+        const carousel = document.getElementById('carousel');
+        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        let cur = 0, timer = null, hold = false;
+
+        SLIDES.forEach((s, i) => {
+            const fig = document.createElement('figure');
+            fig.className = 'slide';
+            fig.setAttribute('role', 'group');
+            fig.setAttribute('aria-roledescription', 'slide');
+            fig.setAttribute('aria-label', `${i + 1} de ${SLIDES.length}`);
+            fig.innerHTML = `<img src="${s.img}" alt="${s.alt}" class="${s.fit === 'contain' ? 'contain' : ''}" ${i ? 'loading="lazy"' : ''}>`;
+            frame.insertBefore(fig, frame.firstChild);
+
+            const d = document.createElement('button');
+            d.className = 'dot';
+            d.setAttribute('aria-label', `Ir para o slide ${i + 1}: ${s.title}`);
+            d.addEventListener('click', () => { show(i); restart(); });
+            dotsEl.appendChild(d);
+        });
+
+        /* insertBefore inverte a ordem; reordena para a sequência certa */
+        const slideEls = Array.from(frame.querySelectorAll('.slide')).reverse();
+        const dotEls = dotsEl.querySelectorAll('.dot');
+
+        function show(i) {
+            cur = (i + SLIDES.length) % SLIDES.length;
+            slideEls.forEach((el, k) => el.classList.toggle('is-active', k === cur));
+            dotEls.forEach((el, k) => el.classList.toggle('is-active', k === cur));
+            titleEl.textContent = SLIDES[cur].title;
+            linkEl.textContent = SLIDES[cur].cta;
+            linkEl.href = SLIDES[cur].href;
+            const ext = SLIDES[cur].href.startsWith('http');
+            linkEl.target = ext ? '_blank' : '_self';
+            linkEl.rel = ext ? 'noopener' : '';
+        }
+
+        function runBar() {
+            bar.classList.remove('run');
+            void bar.offsetWidth;
+            bar.style.setProperty('--delay', DELAY + 'ms');
+            bar.classList.add('run');
+        }
+
+        function start() {
+            if (reduce || hold) return;
+            clearInterval(timer);
+            runBar();
+            timer = setInterval(() => { show(cur + 1); runBar(); }, DELAY);
+        }
+
+        function stop() { clearInterval(timer); bar.classList.remove('run'); bar.style.width = '0'; }
+        function restart() { stop(); start(); }
+
+        document.getElementById('cPrev').addEventListener('click', () => { show(cur - 1); restart(); });
+        document.getElementById('cNext').addEventListener('click', () => { show(cur + 1); restart(); });
+
+        carousel.addEventListener('mouseenter', () => { hold = true; stop(); });
+        carousel.addEventListener('mouseleave', () => { hold = false; start(); });
+        carousel.addEventListener('focusin', () => { hold = true; stop(); });
+        carousel.addEventListener('focusout', () => { hold = false; start(); });
+        document.addEventListener('visibilitychange', () => { document.hidden ? stop() : start(); });
+        carousel.addEventListener('keydown', e => {
+            if (e.key === 'ArrowLeft') { show(cur - 1); restart(); }
+            if (e.key === 'ArrowRight') { show(cur + 1); restart(); }
+        });
+
+        let sx = null;
+        frame.addEventListener('pointerdown', e => { sx = e.clientX; });
+        frame.addEventListener('pointerup', e => {
+            if (sx === null) return;
+            const dx = e.clientX - sx;
+            if (Math.abs(dx) > 50) { show(cur + (dx < 0 ? 1 : -1)); restart(); }
+            sx = null;
+        });
+
+        show(0);
+        start();
+
+        /* ==========================================================
+           Setas de pontos (assinatura visual das artes do B13)
+           ========================================================== */
+        (function chevrons() {
+            const s = 14, out = [];
+            for (let c = 0; c < 3; c++) {
+                for (let r = 0; r < 5; r++) {
+                    const x0 = Math.abs(r - 2);
+                    [0, 1].forEach(t => out.push(`<circle cx="${(c * 4 + x0 + t) * s + 5}" cy="${r * s + 5}" r="4.6" fill="#35f043"/>`));
+                }
+            }
+            document.getElementById('chevrons').innerHTML = out.join('');
+        })();
+
+        /* ==========================================================
+           PROFESSORES
+           Para incluir a equipe: coloque as fotos em /img (ex.: img/prof-nome.jpg)
+           e edite a lista abaixo. Pode adicionar, remover ou reordenar.
+           instagram é opcional; omita a linha se o professor não tiver.
+           ========================================================== */
+        /* ==========================================================
+           PROFESSORES
+           ========================================================== */
+        const STAFF = [
+            {
+                name: 'Thor',
+                role: 'Head Coach',
+                bio: '33 Anos, Cursos principais: Treinador de Crossfit Level 1 e Level 2',
+                img: 'img/thor.jpg',
+                instagram: 'thor_cf'
+            },
+            {
+                name: 'Bruno Wagner',
+                role: 'Coach',
+                bio: '38 anos, Professor de Educação Física, Pós-Graduado em Fisiologia e Prescrição do Exercício. Cursos: Introdução ao Método Crossfit, Introdução ao Levantamento de Peso Olímpico, Periodização no Crossfit.',
+                img: 'img/bruno2.jpg',
+                instagram: 'brunow_cf'
+            },
+            {
+                name: 'Junior Silva',
+                role: 'Coach',
+                bio: '31 anos e Certificado Velcore - Treinamento Funcional (Fase 1)',
+                img: 'img/junior.jpg',
+                pos: 'center bottom',
+                instagram: 'vibefitjr'
+            },
+            {
+                name: 'Yuri',
+                role: 'Coach',
+                bio: '23 anos e trabalhando com Crossfit desde 2021. Uma das minhas metas pessoais é fazer o Level 1 da Crossfit e continuar evoluindo como atleta e Coach.',
+                img: 'img/yuri.jpg',
+                instagram: 'yurifelipe28_'
+            }
+        ];
+
+        (function renderStaff() {
+            const grid = document.getElementById('staffGrid');
+            grid.innerHTML = STAFF.map(p => `
+                <article class="staff-card">
+                    <div class="staff-photo">
+                        <img src="${p.img}" alt="${p.name}, professor do B13 CT" loading="lazy">
+                    </div>
+                    <div class="staff-body">
+                        <h3 class="staff-name">${p.name}</h3>
+                        <p class="staff-role">${p.role}</p>
+                        ${p.bio ? `<p class="staff-bio">${p.bio}</p>` : ''}
+                        ${p.instagram ? `<a class="staff-ig" href="https://instagram.com/${p.instagram.replace('@', '')}" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i>@${p.instagram.replace('@', '')}</a>` : ''}
+                    </div>
+                </article>`).join('');
+        })();
+
+        /* ==========================================================
+           AULA EXPERIMENTAL
+           ========================================================== */
+        const WEEK = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta'];
+        const WEEK_TIMES = ['06:00', '07:00', '08:00', '12:00', '16:30', '17:30', '18:30', '19:30'];
+        const SAT_TIMES = ['07:00'];
+
+        const fNome = document.getElementById('fNome');
+        const fDia = document.getElementById('fDia');
+        const fHora = document.getElementById('fHora');
+        const fXp = document.getElementById('fXp');
+        const fErr = document.getElementById('fErr');
+
+        function fillTimes(selected) {
+            const list = fDia.value === 'Sábado' ? SAT_TIMES : WEEK_TIMES;
+            fHora.innerHTML = list.map(t => `<option value="${t}">${t.replace(':', 'h').replace('h00', 'h')}</option>`).join('');
+            if (selected && list.includes(selected)) fHora.value = selected;
+        }
+
+        fDia.addEventListener('change', () => fillTimes());
+        fillTimes();
+
+        document.getElementById('fSend').addEventListener('click', () => {
+            const nome = fNome.value.trim();
+            if (!nome) {
+                fErr.textContent = 'Informe seu nome para continuar.';
+                fNome.focus();
+                return;
+            }
+            fErr.textContent = '';
+            const hora = fHora.options[fHora.selectedIndex].text;
+            const msg = `Olá! Me chamo ${nome} e quero agendar uma aula experimental no B13 CT.\nDia: ${fDia.value}\nHorário: ${hora}\nJá treinou Cross: ${fXp.value}`;
+            window.open(waLink(msg), '_blank', 'noopener');
+        });
+
+        fNome.addEventListener('input', () => { fErr.textContent = ''; });
+
+        /* Tocar num horário da grade preenche o formulário */
+        document.querySelectorAll('.slot').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const day = btn.dataset.day;
+                if (day) { fDia.value = day; }
+                else if (fDia.value === 'Sábado') { fDia.value = 'Segunda'; }
+                fillTimes(btn.dataset.time);
+                document.getElementById('experimental').scrollIntoView({ behavior: 'smooth' });
+                setTimeout(() => fNome.focus({ preventScroll: true }), 500);
+            });
+        });
+
+        /* ==========================================================
+           PRÓXIMA AULA (horário de Salvador)
+           ========================================================== */
+        (function nextClass() {
+            const parts = new Intl.DateTimeFormat('en-US', {
+                timeZone: 'America/Bahia', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
+            }).formatToParts(new Date());
+            const get = t => parts.find(p => p.type === t).value;
+            const dowMap = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+            const today = dowMap[get('weekday')];
+            const nowMin = parseInt(get('hour'), 10) * 60 + parseInt(get('minute'), 10);
+            const toMin = t => { const [h, m] = t.split(':').map(Number); return h * 60 + m; };
+            const names = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado'];
+
+            for (let off = 0; off < 8; off++) {
+                const dow = (today + off) % 7;
+                const times = dow === 0 ? [] : dow === 6 ? SAT_TIMES : WEEK_TIMES;
+                const t = times.find(x => off > 0 || toMin(x) > nowMin);
+                if (!t) continue;
+
+                const when = off === 0 ? 'hoje' : off === 1 ? 'amanhã' : names[dow];
+                const box = document.getElementById('nextClass');
+                box.innerHTML = `<small>Próxima aula</small><strong>${when}</strong> às ${t.replace(':', 'h').replace('h00', 'h')}`;
+                box.hidden = false;
+
+                if (dow === 6) {
+                    document.getElementById('cardSab').classList.add('is-next');
+                    document.querySelector('#cardSab .slot').classList.add('is-next');
+                } else {
+                    document.querySelectorAll('.periods .slot').forEach(b => { if (b.dataset.time === t) b.classList.add('is-next'); });
+                }
+                return;
+            }
+        })();
+    </script>
+</body>
+</html>
